@@ -1,0 +1,56 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+	{% include 'navbar.twig' %}
+
+	<div class="w-full sm:max-w-4xl mx-auto py-10 sm:py-20 px-6">
+
+		<h1 class="text-3xl font-semibold leading-none">{{ user.displayName}}'s Profile</h1>
+		<p class="text-lg mt-2 text-gray-500 leading-none">User profile</p>
+
+		<div class="mt-10">
+			<div>
+				<label for="username" class="block w-full font-semibold text-gray-700">
+					Username
+				</label>
+				<div class="mt-1 flex rounded-md shadow-sm">
+					<input type="text" id="username" value={{ user.username }} class="mt-1 appearance-none block w-full bg-white border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-300">
+				</div>
+			</div>
+            <div class="mt-4">
+				<label for="displayname" class="block w-full font-semibold text-gray-700">
+					Displayname
+				</label>
+				<div class="mt-1 flex rounded-md shadow-sm">
+					<input type="text" id="displayname" value={{ user.displayName }} class="mt-1 appearance-none block w-full bg-white border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-300">
+				</div>
+			</div>
+            <div class="mt-4">
+				<label for="email" class="block w-full font-semibold text-gray-700">
+					Email
+				</label>
+				<div class="mt-1 flex rounded-md shadow-sm">
+					<input type="text" id="email" value={{ user.email }} class="mt-1 appearance-none block w-full bg-white border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-300">
+				</div>
+			</div>
+		</div>
+	</div>
+
+    {% if betaFeature %}
+    <div id="greets" class="w-full sm:max-w-4xl mx-auto mt-6 text-gray-500 px-6">
+        <div class="py-3 sm:mx-auto">
+            <div class="px-4 py-10 bg-green-700 rounded-lg sm:rounded-lg p-20">
+                <div class="max-w-md mx-auto text-green-100 text-center">
+                    <p class="text-3xl text-white font-semibold leading-none">Features for {{user.displayName}}
+                    <p class="text-xl mt-2 leading-none">Best greetings from Wilhelm.</p>
+                    <div class="mt-6 pt-4">
+                        <a class="border border-white hover:bg-white hover:text-green-700 px-4 py-2 rounded text-lg text-white font-semibold" target="_blank" href="https://support.switchover.io/docs/node-js">Read the docs &rarr; </a>
+                    </div>       
+                </div>
+            </div>
+        </div
+    {% endif %}
+
+
+{% endblock %}

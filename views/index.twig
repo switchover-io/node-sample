@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    
+    {% include 'navbar.twig' %}   
+
+    <div class="w-full bg-gradient-to-r from-green-200 to-blue-300">
+        <div class="max-w-4xl mx-auto py-10 sm:py-20 px-6">
+            <h1 class="font-bold text-4xl uppercase leading-none text-gray-900 tracking-wider">Wilhelm Wiesel's* awesome demo</h1>
+            <p class=" font-regular leading-none pt-4 text-2xl uppercase tracking-wider text-gray-600">Switchover Web Sample</p>
+        </div>
+    </div>
+
+
+    <div class="w-full sm:max-w-4xl mx-auto mt-4 px-6 py-4 text-gray-500">
+        <p class="font-semibold uppercase">How to: </p>
+        <ol class="list-decimal font-semibold list-inside space-y-2 mt-1">
+            <li>Copy <span class="font-mono bg-red-100 rounded p-1 text-red-400">.env.sample</span> to <span class="font-mono bg-red-100 rounded p-1 text-red-400">.env</span></li>
+            <li>Change the variable <span class="font-mono bg-red-100 rounded p-1 text-red-400">SDK_KEY</span> and <span class="font-mono bg-red-100 rounded p-1 text-red-400">TOGGLE_NAME</span> to your actual environment sdk key and existing toggle</li>
+            <li>Go to Switchover and add a condition to your toggle: <span class="font-mono bg-blue-100 rounded p-1 text-blue-400">userId matches jack@example.com</span> and save the toggle</li>
+            <li>Change the toggle status (inactive &rarr; active) in your environment. Don't forget to publish it</li>
+            <li>Start (if you not already have started) the node server</li>
+            <li>Login and test with two users (username/password): <span class="font-mono bg-gray-200 rounded p-1 text-gray-500">jack/secret</span>, <span class="font-mono bg-gray-200 rounded p-1 text-gray-500">john/birthday</span></li>
+        </ol>
+    </div>
+
+{% endblock %}

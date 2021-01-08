@@ -1,0 +1,26 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+	<div class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+		<div class="w-full sm:max-w-md mt-0 px-0 py-0 bg-white rounded-lg shadow-lg overflow-hidden">
+			<form method="POST" action="/login" class="block px-6 pb-4">
+				<!---->
+				<div class="block">
+					<label for="name" class="mt-4 block">
+						<span class="block w-full font-semibold text-gray-700">Username</span>
+						<input id="username" name="username" type="text" required="required" class="mt-1 appearance-none block w-full bg-white border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"></label>
+				</div>
+
+				<div class="block mt-1">
+					<label for="checkin" class="mt-4 block">
+						<span class="block w-full font-semibold text-gray-700">Password</span>
+                        <input id="password" name="password" type="password" required="required" class="mt-1 appearance-none block w-full bg-white border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"></label>
+				</div>
+				<div class="w-full mt-4">
+					<button type="submit" class="w-full text-center bg-gray-700 hover:bg-gray-800 text-white font-semibold text-lg px-4 py-3 rounded">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>{% endblock %}
