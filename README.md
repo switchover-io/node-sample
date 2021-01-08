@@ -1,6 +1,6 @@
 # Switchover Node Sample
 
-Sample showing how to use Switchover with node/ExpressJS.
+Sample showing how to use Switchover with Node/ExpressJS. This sample shows how to unlock a feature (in the sample a teaser) based on user conditions. 
 
 ## Installation
 
